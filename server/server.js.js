@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-const publicPath = path.join(__dirname, "..", "public");
+const publicPath = path.join(__dirname, "..", "build");
 app.use(express.static(publicPath));
 
 app.listen(port, () => {
