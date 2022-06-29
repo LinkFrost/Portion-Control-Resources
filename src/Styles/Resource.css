@@ -1,0 +1,73 @@
+.resourceList {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.resource-title h3 {
+  padding: 30px 30px;
+  cursor: pointer;
+  transform: translate3d(0, 0, 0);
+  font-size: 20px;
+  background: #c1b0c4;
+  margin-bottom: -1px;
+  border-bottom: 3px solid #a2919a;
+  text-align: left;
+}
+
+.resource-title h3::after {
+  content: "+";
+  font-size: 18px;
+  transition: transform 0.5s ease-in-out;
+  position: absolute;
+  right: 30px;
+  font-family: monospace;
+}
+
+.resource-title.expanded h3 {
+  transition: background 0.5s;
+  background: #a2919b;
+}
+
+.resource-title.expanded h3::after {
+  content: "-";
+  transform: rotate(-180deg);
+}
+
+.content {
+  background: #ded0d9;
+  transition: max-height 0.5s;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.content p {
+  padding: 15px 0;
+  margin: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.content img {
+  padding: 15px;
+  max-width: 500px;
+  max-height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.content.expanded {
+  max-height: 5000px;
+  overflow: hidden;
+  margin-left: 0;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+.content.expanded p {
+  opacity: 1;
+}
+
+.content.expanded img {
+  opacity: 1;
+}
